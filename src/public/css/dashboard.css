@@ -69,3 +69,27 @@ hr {
     border: none;
     border-bottom: 1px solid #ffffff;
 }
+
+.container .meal .meal-add {
+    padding: 0;
+    margin: 0;
+}
+
+.container .meal .meal-add button {
+    background-color: transparent;
+    color: #999999;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: left;
+    padding: 10px;
+}
+
+.container .meal .meal-add button:hover {
+    background-color: #111111;
+}
+
+.container .meal .meal-add button i {
+    margin-right: 10px;
+    color: #999999;
+}
