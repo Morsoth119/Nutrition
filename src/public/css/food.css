@@ -1,0 +1,27 @@
+.container .food {
+    width: 800px;
+}
+
+.container .food .food-item {
+    display: grid;
+    grid-template-columns: 1fr 150px 150px 150px 150px;
+    padding: 5px;
+    margin: 5px;
+}
+
+.container .food .food-header h3 {
+    font-size: 24px;
+}
+
+.container .food .food-header span {
+    margin-top: 5px;
+    font-weight: bold;
+}
+
+.container .food .food-item h5 {
+    font-weight: 400;
+}
+
+.container .food .food-item span {
+    text-align: right;
+}

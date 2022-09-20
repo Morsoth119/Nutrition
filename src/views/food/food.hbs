@@ -1,0 +1,23 @@
+<div class="container">
+    <div class="food">
+        <div class="food-item food-header">
+            <h3>Food</h3>
+            <span>kcal / 100g</span>
+            <span>Carbs (g) / 100g</span>
+            <span>Protein (g) / 100g</span>
+            <span>Fats (g) / 100g</span>
+        </div>
+        <hr>
+
+        {{#each foods}}
+            <div class="food-item">
+                <h5>{{name}}</h5>
+                <span>{{kcal}} kcal</span>
+                <span>{{carb}}g</span>
+                <span>{{prot}}g</span>
+                <span>{{fats}}g</span>
+            </div>
+        {{/each}}
+
+    </div>
+</div>
