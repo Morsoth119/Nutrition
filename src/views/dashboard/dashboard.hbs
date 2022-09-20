@@ -1,128 +1,38 @@
 <div class="container">
     <div class="meal">
-        <div class="meal-item meal-header">
-            <h3>Breakfast</h3>
-            <span>105 kcal</span>
-            <span>Carbs: 25g</span>
-            <span>Protein: 123g</span>
-            <span>Fats: 31g</span>
-            <span>Quantity</span>
-        </div>
-        <hr>
-        <div class="meal-item">
-            <h5>Plátano</h5>
-            <span>105 kcal</span>
-            <span>25g</span>
-            <span>123g</span>
-            <span>31g</span>
-            <div>
-                <input type="number" value="123">g
+        {{#each meals}}
+            <div class="meal-item meal-header">
+                <h3>{{name}}</h3>
+                <span>105 kcal</span>
+                <span>Carbs: 25g</span>
+                <span>Protein: 123g</span>
+                <span>Fats: 31g</span>
+                <span>Quantity</span>
             </div>
-        </div>
-        <div class="meal-item meal-add">
-            <button><i class="fa-regular fa-plus"></i>Add</button>
-        </div>
-    </div>
-    <div class="meal">
-        <div class="meal-item meal-header">
-            <h3>Lunch</h3>
-            <span>105 kcal</span>
-            <span>Carbs: 25g</span>
-            <span>Protein: 123g</span>
-            <span>Fats: 31g</span>
-            <span>Quantity</span>
-        </div>
-        <hr>
-        <div class="meal-item">
-            <h5>Plátano</h5>
-            <span>105 kcal</span>
-            <span>25g</span>
-            <span>123g</span>
-            <span>31g</span>
-            <div>
-                <input type="number" value="123">g
+            <hr>
+            <div class="meal-item">
+                <h5>Plátano</h5>
+                <span>105 kcal</span>
+                <span>25g</span>
+                <span>123g</span>
+                <span>31g</span>
+                <div>
+                    <input type="number" value="123">g
+                </div>
             </div>
-        </div>
-        <div class="meal-item">
-            <h5>Plátano</h5>
-            <span>105 kcal</span>
-            <span>25g</span>
-            <span>123g</span>
-            <span>31g</span>
-            <div>
-                <input type="number" value="123">g
+            <div class="meal-item">
+                <h5>Plátano</h5>
+                <span>105 kcal</span>
+                <span>25g</span>
+                <span>123g</span>
+                <span>31g</span>
+                <div>
+                    <input type="number" value="123">g
+                </div>
             </div>
-        </div>
-        <div class="meal-item meal-add">
-            <button><i class="fa-regular fa-plus"></i>Add</button>
-        </div>
-    </div>
-    <div class="meal">
-        <div class="meal-item meal-header">
-            <h3>Snack</h3>
-            <span>105 kcal</span>
-            <span>Carbs: 25g</span>
-            <span>Protein: 123g</span>
-            <span>Fats: 31g</span>
-            <span>Quantity</span>
-        </div>
-        <hr>
-        <div class="meal-item">
-            <h5>Plátano</h5>
-            <span>105 kcal</span>
-            <span>25g</span>
-            <span>123g</span>
-            <span>31g</span>
-            <div>
-                <input type="number" value="123">g
+            <div class="meal-item meal-add">
+                <button><i class="fa-regular fa-plus"></i>Add</button>
             </div>
-        </div>
-        <div class="meal-item">
-            <h5>Plátano</h5>
-            <span>105 kcal</span>
-            <span>25g</span>
-            <span>123g</span>
-            <span>31g</span>
-            <div>
-                <input type="number" value="123">g
-            </div>
-        </div>
-        <div class="meal-item">
-            <h5>Plátano</h5>
-            <span>105 kcal</span>
-            <span>25g</span>
-            <span>123g</span>
-            <span>31g</span>
-            <div>
-                <input type="number" value="123">g
-            </div>
-        </div>
-        <div class="meal-item meal-add">
-            <button><i class="fa-regular fa-plus"></i>Add</button>
-        </div>
-    </div>
-    <div class="meal">
-        <div class="meal-item meal-header">
-            <h3>Dinner</h3>
-            <span>105 kcal</span>
-            <span>Carbs: 25g</span>
-            <span>Protein: 123g</span>
-            <span>Fats: 31g</span>
-            <span>Quantity</span>
-        </div>
-        <hr>
-        <div class="meal-item">
-            <h5>Plátano</h5>
-            <span>105 kcal</span>
-            <span>25g</span>
-            <span>123g</span>
-            <span>31g</span>
-            <div>
-                <input type="number" value="123">g
-            </div>
-        </div>
-        <div class="meal-item meal-add">
-            <button><i class="fa-regular fa-plus"></i>Add</button>
-        </div>
+        {{/each}}
     </div>
 </div>

@@ -24,6 +24,7 @@ app.use(express.json());
 app.use(require("./routes"));
 app.use(require("./routes/auth"));
 app.use("/dashboard", require("./routes/dashboard"));
+app.use("/food", require("./routes/food"));
 
 // 
 app.use(express.static(path.join(__dirname, "public")));
