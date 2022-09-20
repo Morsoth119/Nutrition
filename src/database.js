@@ -1,13 +1,10 @@
 const mysql = require("mysql");
 const { promisify } = require("util"); // Sirve para poder usar promesas con la base de datos
 
+const db_keys = require("./keys");
+
 // Create mysql connection
-const pool = mysql.createPool({
-    host: "localhost",
-    user: "root",
-    password: "PauZaga_09",
-    database: "nutrition"
-});
+const pool = mysql.createPool(db_keys);
 
 pool.getConnection((err, connection) => {
     if (err) throw err;
