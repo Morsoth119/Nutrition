@@ -52,7 +52,7 @@ hr {
     justify-content: space-between;
 }
 
-.container .meal .meal-box .meal-item h5 button {
+.container .meal .meal-box .meal-item h5 a {
     background-color: transparent;
     border: none;
     cursor: pointer;
@@ -62,13 +62,14 @@ hr {
     justify-content: center;
     align-items: center;
     border-radius: 4px;
+    text-decoration: none;
 }
 
-.container .meal .meal-box .meal-item h5 button:hover {
+.container .meal .meal-box .meal-item h5 a:hover {
     background-color: #111111;
 }
 
-.container .meal .meal-box .meal-item h5 button i {
+.container .meal .meal-box .meal-item h5 a i {
     font-size: 12px;
     text-align: center;
     color: #999999;
@@ -100,7 +101,7 @@ hr {
     margin: 0;
 }
 
-.container .meal .meal-add button {
+.container .meal .meal-add a {
     background-color: transparent;
     color: #999999;
     border: none;
@@ -108,13 +109,14 @@ hr {
     text-align: left;
     padding: 10px;
     cursor: pointer;
+    text-decoration: none;
 }
 
-.container .meal .meal-add button:hover {
+.container .meal .meal-add a:hover {
     background-color: #111111;
 }
 
-.container .meal .meal-add button i {
+.container .meal .meal-add a i {
     margin-right: 10px;
     color: #999999;
 }
