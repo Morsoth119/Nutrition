@@ -1,1 +1,15 @@
-hola
+<div class="container">
+    <div class="options">
+        <h3>Select the food you want to add to {{meal.[0].name}}</h3>
+        <form method="get" action="/dashboard/adda">
+            <div class="search-bar">
+                <input type="search" name="name" placeholder="Search...">
+                <input type="submit" value="Accept"types>
+            </div>
+            {{#each foods}}
+                <input type="checkbox" id="{{name}}" name="food" value="{{id}}">
+                <label for="{{name}}">{{name}}</label>
+            {{/each}}
+        </form>
+    </div>
+</div>

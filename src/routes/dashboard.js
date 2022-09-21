@@ -19,14 +19,27 @@ router.get("/delete/:id", async (req, res) => {
     res.redirect("/");
 });
 
-router.get("/add", async (req, res) => {
-    res.render("/dashboard/add");
+router.get("/add/:id", async (req, res) => {
+    const { id } = req.params;
+    const meal = await pool.query("SELECT * FROM meals WHERE id = ?", [id]);
+    const foods = await pool.query("SELECT * FROM foods");
+    res.render("dashboard/add", {meal, foods});
 });
-/*
+
 router.post("/add/:id", async (req, res) => {
     const { id } = req.params;
-    await pool.query("INSERT INTO user_food_meal  VALUES (1, 1, 3, 1, 100);", [id]);
+    const newItem = {
+        user: 1,
+        food: id2,
+        meal: id1
+    };
+    console.log(newItem);
+    //await pool.query("INSERT INTO user_food_meal  VALUES (?);", [newItem]);
     res.redirect("/");
-});*/
+});
+
+router.get("/adda", (req, res) => {
+    res.send(req.params);
+});
 
 module.exports = router;

@@ -67,3 +67,7 @@ INSERT INTO user_food_meal VALUES (8, 1, 3, 4, 225);
 SELECT a.id, f.name, f.kcal, f.carb, f.prot, f.fats, a.meal, a.quantity
 FROM user_food_meal a, users u, foods f, meals m
 WHERE a.user = u.id AND a.food = f.id AND a.meal = m.id AND u.id = 1;
+
+SELECT f.id, f.name, m.id, m.name
+FROM foods f, meals m
+WHERE m.id = 1;
