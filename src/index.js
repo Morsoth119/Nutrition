@@ -3,7 +3,9 @@ const morgan = require("morgan");
 const hbs = require("express-handlebars");
 const path = require("path");
 const session = require("express-session");
+const mysqlStore = require("express-mysql-session");
 const passport = require("passport");
+const { database } = require("./keys");
 
 require("./lib/passport");
 
@@ -20,6 +22,12 @@ app.engine(".hbs", hbs.engine({
 app.set("view engine", ".hbs"); // Para usar  hbs como motor de plantillas html
 
 // Middlewares
+app.use(session({
+    secret: "nutritionMySqlSession",
+    resave: false,
+    saveUninitialized: false,
+    store: new mysqlStore(database)
+}));
 app.use(morgan("dev"));
 app.use(express.urlencoded({extended: false}));
 app.use(express.json());
