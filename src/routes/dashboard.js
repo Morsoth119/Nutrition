@@ -26,20 +26,18 @@ router.get("/add/:id", async (req, res) => {
     res.render("dashboard/add", {meal, foods});
 });
 
-router.post("/add/:id", async (req, res) => {
-    const { id } = req.params;
+router.post("/add/:meal", async (req, res) => {
+    const { meal } = req.params;
+    const { food, quantity } = req.body;
+    const user = 1;
     const newItem = {
-        user: 1,
-        food: id2,
-        meal: id1
-    };
-    console.log(newItem);
-    //await pool.query("INSERT INTO user_food_meal  VALUES (?);", [newItem]);
+        user,
+        food,
+        meal,
+        quantity
+    }
+    await pool.query("INSERT INTO user_food_meal SET ?", [newItem]);
     res.redirect("/");
-});
-
-router.get("/adda", (req, res) => {
-    res.send(req.params);
 });
 
 module.exports = router;

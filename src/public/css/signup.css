@@ -1,36 +1,25 @@
-.container .options {
-    width: 800px;
-}
-
-.container .options h3 {
-    font-size: 40px;
-    margin-top: 10px;
-}
-
-.container .options .add-form {
+.container .signup-form {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-top: 10px;
     width: 100%;
-    gap: 10px;
+    margin-top: 10px;
 }
 
-.container .options .add-form select {
-    background-color: transparent;
-    border: 1px solid #ffffff;
-    border-radius: 4px;
+.container .signup-form h3 {
+    font-size: 34px;
+}
+
+.container .signup-form label {
+    font-size: 14px;
+    text-align: left;
     width: 400px;
-    font-size: 20px;
-    padding: 10px;
-    cursor: pointer;
+    margin-top: 16px;
+    margin-left: 8px;
 }
 
-.container .options .add-form select:hover {
-    background-color: #111111;
-}
-
-.container .options .add-form input[type=number] {
+.container .signup-form input[type=text] {
     -moz-appearance: textfield;
     outline: none;
     background-color: transparent;
@@ -40,13 +29,31 @@
     font-size: 20px;
     padding: 10px 14px;
     box-sizing: border-box;
+    margin-top: 4px;
 }
 
-.container .options .add-form input[type=number]::placeholder {
+.container .signup-form input[type=text]::placeholder {
     color: #999999;
 }
 
-.container .options .add-form input[type=submit] {
+.container .signup-form input[type=password] {
+    -moz-appearance: textfield;
+    outline: none;
+    background-color: transparent;
+    border: 1px solid #ffffff;
+    border-radius: 4px;
+    width: 400px;
+    font-size: 20px;
+    padding: 10px 14px;
+    box-sizing: border-box;
+    margin-top: 4px;
+}
+
+.container .signup-form input[type=password]::placeholder {
+    color: #999999;
+}
+
+.container .signup-form input[type=submit] {
     background-color: transparent;
     border: 1px solid #ffffff;
     border-radius: 4px;
@@ -55,8 +62,9 @@
     padding: 10px 14px;
     box-sizing: border-box;
     cursor: pointer;
+    margin-top: 26px;
 }
 
-.container .options .add-form input[type=submit]:hover {
+.container .signup-form input[type=submit]:hover {
     background-color: #111111;
 }
