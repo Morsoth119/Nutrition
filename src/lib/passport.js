@@ -1,5 +1,7 @@
 const passport = require("passport");
 const LocalStrategy = require("passport-local").Strategy;
+const pool = require("../database");
+const crypt = require("../lib/bcrypt");
 
 passport.use("local.signup", new LocalStrategy({
     usernameField: "username",
@@ -12,10 +14,17 @@ passport.use("local.signup", new LocalStrategy({
         fullname,
         password
     }
-    console.log(req.body);
+    newUser.password = await crypt.encrypt(password);
+    const res = await pool.query("INSERT INTO users SET ?", [newUser]);
+    newUser.id = res.insertId;
+    return done(null, newUser);
 }));
-/*
-passport.serializeUser((usr, done) => {
 
+passport.serializeUser((user, done) => {
+    done(null, user.id);
 });
-*/
+
+passport.deserializeUser(async (id, done) => {
+    const rows = await pool.query("SELECT * FROM users WHERE id = ?", [id]);
+    done(null, rows[0]);
+});
