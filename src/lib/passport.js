@@ -3,6 +3,34 @@ const LocalStrategy = require("passport-local").Strategy;
 const pool = require("../database");
 const crypt = require("../lib/bcrypt");
 
+// SIGN IN
+
+passport.use("local.signin", new LocalStrategy({
+    usernameField: "username",
+    passwordField: "password",
+    passReqToCallback: true
+}, async (req, username, password, done) => {
+    const rows = await pool.query("SELECT * FROM users WHERE username = ?", [username]);
+    if (rows.length > 0) {
+        const user = rows[0];
+        const validPassword = await crypt.decrypt(password, user.password);
+        if (validPassword) {
+            console.log("User and password are correct");
+            done(null, user);
+        }
+        else {
+            console.log("Password is not correct");
+            done(null, false);
+        }
+    }
+    else {
+        console.log("User not found");
+        return done(null, false);
+    }
+}));
+
+// SIGN UP
+
 passport.use("local.signup", new LocalStrategy({
     usernameField: "username",
     passwordField: "password",

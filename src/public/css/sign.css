@@ -1,4 +1,4 @@
-.container .signup-form {
+.container .sign-form {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -7,11 +7,11 @@
     margin-top: 10px;
 }
 
-.container .signup-form h3 {
+.container .sign-form h3 {
     font-size: 34px;
 }
 
-.container .signup-form label {
+.container .sign-form label {
     font-size: 14px;
     text-align: left;
     width: 400px;
@@ -19,7 +19,7 @@
     margin-left: 8px;
 }
 
-.container .signup-form input[type=text] {
+.container .sign-form input[type=text] {
     -moz-appearance: textfield;
     outline: none;
     background-color: transparent;
@@ -32,11 +32,11 @@
     margin-top: 4px;
 }
 
-.container .signup-form input[type=text]::placeholder {
+.container .sign-form input[type=text]::placeholder {
     color: #999999;
 }
 
-.container .signup-form input[type=password] {
+.container .sign-form input[type=password] {
     -moz-appearance: textfield;
     outline: none;
     background-color: transparent;
@@ -49,11 +49,11 @@
     margin-top: 4px;
 }
 
-.container .signup-form input[type=password]::placeholder {
+.container .sign-form input[type=password]::placeholder {
     color: #999999;
 }
 
-.container .signup-form input[type=submit] {
+.container .sign-form input[type=submit] {
     background-color: transparent;
     border: 1px solid #ffffff;
     border-radius: 4px;
@@ -65,6 +65,6 @@
     margin-top: 26px;
 }
 
-.container .signup-form input[type=submit]:hover {
+.container .sign-form input[type=submit]:hover {
     background-color: #111111;
 }
