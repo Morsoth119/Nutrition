@@ -3,7 +3,8 @@ const morgan = require("morgan");
 const hbs = require("express-handlebars");
 const path = require("path");
 const session = require("express-session");
-// const MySQLStore = require("express-mysql-session");
+// const validator = require("express-validator");
+// const MySQLStore = require("express-mysql-session")(session);
 const passport = require("passport");
 // const { db_keys } = require("./keys");
 
@@ -21,12 +22,19 @@ app.engine(".hbs", hbs.engine({
 })); // Configuracion de hbs
 app.set("view engine", ".hbs"); // Para usar hbs como motor de plantillas html
 
+// Global Variables
+app.use((req, res, next) => {
+    app.locals.user = req.user;
+    console.log(req.user);
+    next();
+});
+
 // Middlewares
 app.use(session({
     secret: "nutritionMySqlSession",
     resave: false,
     saveUninitialized: false
-    //store: new MySQLStore(db_keys)
+    // store: new MySQLStore(db_keys)
 }));
 app.use(morgan("dev"));
 app.use(express.urlencoded({extended: false}));
